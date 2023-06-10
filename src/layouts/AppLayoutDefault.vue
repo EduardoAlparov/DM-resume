@@ -1,0 +1,122 @@
+<template>
+    <div class="wrapper">
+        <AppLayoutHeader
+            :is-modal-menu-visible="isModalMenuVisible"
+            @toggleModal="toggleModal"
+        />
+
+        <router-view />
+
+        <div class="back-container">
+            <div class="back-container__column back-container__column_first"></div>
+            <div class="back-container__column"></div>
+            <div class="back-container__column"></div>
+            <div class="back-container__column"></div>
+            <div class="back-container__column"></div>
+            <div class="back-container__column"></div>
+            <div class="back-container__column"></div>
+            <div class="back-container__column back-container__column_last"></div>
+		</div>
+
+		<div class="back-container-2">
+			<div class="back-container-2__column back-container-2__column_first">
+				<div class="back-container-2__socials">
+                    <SocialsComponent />
+				</div>
+			</div>
+			<div class="back-container-2__column"></div>
+			<div class="back-container-2__column"></div>
+		</div>
+
+		<div class="back-dark"></div>
+
+        <div class="buttons__banner-open-wrapper">
+			<button
+                class="buttons__banner-open"
+                @click="hiddenFooterClass = !hiddenFooterClass"
+                :disabled="hiddenFooterClass == true"
+            >
+				<span class="buttons__banner-open-icon">
+					<svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+						<g data-name="Group 132" id="Group_132">
+							<path d="M14,52a2,2,0,0,1-1.41-3.41L35.17,26,12.59,3.41a2,2,0,0,1,0-2.82,2,2,0,0,1,2.82,0l24,24a2,2,0,0,1,0,2.82l-24,24A2,2,0,0,1,14,52Z"/>
+						</g>
+					</svg>
+				</span>
+			</button>
+		</div>
+
+        <AppLayoutFooter
+            :hidden-footer-class="hiddenFooterClass"
+            @changeHiddenFooterClass="changeHiddenFooterClass"
+        />
+
+        <AppLayoutModalMenu v-show="isModalMenuVisible"/>
+
+    </div>
+</template>
+
+<script>
+import AppLayoutHeader from "./AppLayoutHeader.vue";
+import AppLayoutModalMenu from "./AppLayoutModalMenu.vue";
+import AppLayoutFooter from "./AppLayoutFooter.vue";
+
+import SocialsComponent from "../components/commons/SocialsComponent.vue";
+
+export default {
+    name: 'AppLayoutDefault',
+
+    components: {
+        AppLayoutHeader,
+        AppLayoutModalMenu,
+        AppLayoutFooter,
+        SocialsComponent
+    },
+
+    data() {
+        return {
+            isModalMenuVisible: false,
+            hiddenFooterClass: true
+        }
+    },
+
+    methods: {
+        toggleModal() {
+            this.isModalMenuVisible = !this.isModalMenuVisible;
+        },
+        changeHiddenFooterClass() {
+            this.hiddenFooterClass = !this.hiddenFooterClass;
+        }
+    }
+}
+</script>
+
+<style scoped>
+
+.back-dark {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+
+    width: 35%;
+    height: 100vh;
+
+    background-color: #101015;
+
+    animation: coloring 1.5s ease-out 0s 1;
+}
+
+@keyframes coloring {
+    0% {
+        transform: translate3d(-100%, 0, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(0px, 0, 0);
+        opacity: 1;
+    }
+}
+
+ </style>

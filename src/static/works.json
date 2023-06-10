@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "name": "автострада",
+        "desc": "Лендинг для диллера газовозов",
+        "about": "",
+        "imageSmall": "highway-small.jpg",
+        "imageBig": "highway.jpg",
+        "skills": [
+            "HTML, CSS",
+            "JavaScript"
+        ]
+    },
+    {
+        "id": 1,
+        "name": "optimus",
+        "desc": "Лендинг для магазина мебели",
+        "about": "",
+        "imageSmall": "optimus-small.jpg",
+        "imageBig": "optimus.jpg",
+        "skills": [
+            "HTML, CSS",
+            "JavaScript, jQuery"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "prizmaxis",
+        "desc": "Страница услуг по художественному оформлению зданий и помещений",
+        "about": "",
+        "imageSmall": "prizmaxis-small.jpg",
+        "imageBig": "prizmaxis.jpg",
+        "skills": [
+            "HTML, CSS",
+            "JavaScript, jQuery"
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+.back-dark {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+
+    height: 100vh;
+
+    max-width: 35%;
+
+    animation: coloring 1.5s ease-out 1.5s;
+}
+
+@keyframes coloring {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 35%;
+    }
+}
