@@ -7,29 +7,6 @@
 
         <router-view />
 
-        <div class="back-container">
-            <div class="back-container__column back-container__column_first"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column back-container__column_last"></div>
-		</div>
-
-		<div class="back-container-2">
-			<div class="back-container-2__column back-container-2__column_first">
-				<div class="back-container-2__socials">
-                    <SocialsComponent />
-				</div>
-			</div>
-			<div class="back-container-2__column"></div>
-			<div class="back-container-2__column"></div>
-		</div>
-
-		<div class="back-dark"></div>
-
         <div class="buttons__banner-open-wrapper">
 			<button
                 class="buttons__banner-open"
@@ -61,7 +38,6 @@ import AppLayoutHeader from "./AppLayoutHeader.vue";
 import AppLayoutModalMenu from "./AppLayoutModalMenu.vue";
 import AppLayoutFooter from "./AppLayoutFooter.vue";
 
-import SocialsComponent from "../components/commons/SocialsComponent.vue";
 
 export default {
     name: 'AppLayoutDefault',
@@ -70,13 +46,12 @@ export default {
         AppLayoutHeader,
         AppLayoutModalMenu,
         AppLayoutFooter,
-        SocialsComponent
     },
 
     data() {
         return {
             isModalMenuVisible: false,
-            hiddenFooterClass: true
+            hiddenFooterClass: false
         }
     },
 
@@ -92,31 +67,5 @@ export default {
 </script>
 
 <style scoped>
-
-.back-dark {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 1;
-
-    width: 35%;
-    height: 100vh;
-
-    background-color: #101015;
-
-    animation: coloring 1.5s ease-out 0s 1;
-}
-
-@keyframes coloring {
-    0% {
-        transform: translate3d(-100%, 0, 0);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate3d(0px, 0, 0);
-        opacity: 1;
-    }
-}
-
- </style>
+@import url('../assets/css/layout/back-dark.css');
+</style>

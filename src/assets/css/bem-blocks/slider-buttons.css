@@ -16,7 +16,7 @@
 
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(139, 69	, 19, 1);
+    border-color: rgba(222, 100, 13, 1);
 
     transition: padding 200ms ease-in-out;
 }
@@ -51,7 +51,7 @@
 
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(139, 69	, 19, 1);
+    border-color: rgba(222, 100, 13, 1);
 
     transition: padding 200ms ease-in-out;
 }

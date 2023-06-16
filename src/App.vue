@@ -8,13 +8,12 @@
 
         <router-view />
 
-
         <div class="buttons__banner-open-wrapper">
           <button
-                    class="buttons__banner-open"
-                    @click="hiddenFooterClass = !hiddenFooterClass"
-                    :disabled="hiddenFooterClass == true"
-                >
+            class="buttons__banner-open"
+            @click="hiddenFooterClass = !hiddenFooterClass"
+            :disabled="hiddenFooterClass == true"
+          >
             <span class="buttons__banner-open-icon">
               <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
                 <g data-name="Group 132" id="Group_132">
@@ -87,20 +86,6 @@ body {
 
   position: relative;
   overflow: hidden;
-}
-
-.back-dark {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 1;
-
-  width: 35%;
-  height: 100vh;
-
-  background-color: #101015;
-
-  animation: coloring 1.5s ease-out 0s 1;
 }
 
 @keyframes coloring {

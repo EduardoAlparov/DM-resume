@@ -32,13 +32,13 @@ export default {
     props: {
         hiddenFooterClass: {
             type: Boolean,
-            default: true
+            default: false
         }
     },
     mounted() {
         setTimeout(() => {
             this.$emit('changeHiddenFooterClass', this.hiddenFooterClass);
-        }, 2000);
+        }, 0);
     }
 }
 </script>
@@ -58,12 +58,13 @@ export default {
     align-items: center;
 
     background-color: #e6e7e8;
-    transition: unset;
+    opacity: 1;
+    transition: bottom 0.3s ease-in;
 }
 
 .footer_close {
-    bottom: -100%;
-    transition: bottom 2s linear;
+    bottom: -30px;
+    opacity: 0;
 }
 
 .footer__details {

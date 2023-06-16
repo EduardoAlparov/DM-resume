@@ -72,7 +72,7 @@
 									vanilla JS
 									<br>
 									<span class="_accent-color">#</span>
-									<span class="_accent-color">good</span> Vue js
+									Vue
 									<br>
 								</div>
 
@@ -126,6 +126,7 @@ export default {
 	},
 }
 </script>
+
 <style scoped>
 @import url('../assets/css/layout/back-container.css');
 @import url('../assets/css/layout/back-container-2.css');

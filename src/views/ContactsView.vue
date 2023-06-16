@@ -33,14 +33,10 @@
 								</h2>
 
 								<p class="details slide__details">
-									Lorem ipsum dolor sit amet, consectetur
-									adipiscing elit. Suspendisse varius enim in
-									eros elementum tristique. Duis cursus, mi
-									quis viverra ornare, eros dolor interdum
-									nulla, ut commodo libero vitae erat. Aenean
-									faucibus nibh et justo cursus id rutrum
-									lorem imperdiet Aliquam facilisis elementum
-									dui.
+									Приоритетная форма связи - через телеграм:<br>
+									<a href="https://t.me/EdFrontDev" target="_blank" class="telegram-link">@EdFrontDev</a><br>
+									Также раз в день просматриваю почту:<br>
+									<a href="mailto:workman133@yandex.ru" target="_blank" class="telegram-link">workman133@yandex.ru</a><br>
 								</p>
 
 
@@ -57,8 +53,6 @@
 
 				</div>
 			</div>
-
-
 		</div>
 
 		<div class="back-container">
@@ -100,4 +94,18 @@ export default {
 @import url('../assets/css/layout/back-container.css');
 @import url('../assets/css/layout/back-container-2.css');
 @import url('../assets/css/layout/back-dark.css');
+
+.telegram-link {
+	display: inline-block;
+	padding: 1rem 0;
+
+	color: inherit;
+	font-size: 150%;
+	text-decoration: none;
+	transition: color 0.3s ease-out;
+}
+
+.telegram-link:hover {
+	color: var(--white);
+}
 </style>

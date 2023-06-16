@@ -4,19 +4,20 @@
     top: 0px;
     z-index: 1;
 
+    width: 35%;
     height: 100vh;
 
-    max-width: 35%;
+    background-color: #101015;
+    transform:translateX(-100%);
 
-    animation: coloring 1.5s ease-out 1.5s;
+    animation: 3s in-out forwards 2.6s;
 }
 
-@keyframes coloring {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 35%;
-    }
+@keyframes in-out {
+  0% {
+    transform:translateX(-100%);
+  }
+  100% {
+    transform:translateX(0%);
+  }
 }

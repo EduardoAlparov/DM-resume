@@ -27,7 +27,9 @@
 /* USER VARIABLES SECTION: */
 :root {
 	--accent: #63637E;
+	--orange: #de640d;
 	--text: #FEFEFE;
+	--white: #FFF;
 	--bg-color: #101015;
 	--regular-text: 13px;
 	--lineheight: 1.65;

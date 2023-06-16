@@ -300,7 +300,7 @@ export default {
     z-index: 14;
 
     font-family: 'Russo One', sans-serif;
-    color: saddlebrown;
+    color: var(--orange);
     font-size: 10px;
     text-transform: lowercase;
 
