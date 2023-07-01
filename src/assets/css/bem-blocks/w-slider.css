@@ -87,12 +87,20 @@
     align-items: center;
 }
 
+.w-slider__button--not-active {
+    pointer-events: none;
+}
+
+.w-slider__button--not-active .buttons__right-arrow-wrapper {
+    border-color: transparent;
+}
+
 @media (max-width: 767px) {
     .w-slider__button-left-arrow {
         left: auto;
         top: auto;
         right: 95px;
-        bottom: 20px;
+        bottom: 40px;
 
         width: auto;
         height: auto;
@@ -102,7 +110,7 @@
     .w-slider__button-right-arrow {
         top: auto;
         right: 25px;
-        bottom: 20px;
+        bottom: 40px;
 
         width: auto;
         height: auto;

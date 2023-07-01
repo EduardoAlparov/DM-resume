@@ -12,19 +12,16 @@ const routes = [
     path: "/",
     name: "About",
     component: About,
-    meta: { layout: 'AppLayoutMain' }
   },
   {
     path: "/works",
     name: "Works",
     component: Works,
-    meta: { layout: 'AppLayoutMain' }
   },
   {
     path: "/contacts",
     name: "Contacts",
     component: Contacts,
-    meta: { layout: 'AppLayoutMain' }
   },
 ];
 

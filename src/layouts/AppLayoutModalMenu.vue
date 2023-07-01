@@ -2,7 +2,10 @@
     <div class="mobile-menu">
         <ul class="nav nav_mobile-menu _name-parent">
             <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a 
+                    class="nav__link"
+                    @click="clickHandler('')"
+                >
                     <span class="nav__link-text">
                         Обо мне
                     </span>
@@ -10,7 +13,10 @@
             </li>
 
             <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a
+                    class="nav__link"
+                    @click="clickHandler('works')"
+                >
                     <span class="nav__link-text">
                         Работы
                     </span>
@@ -18,7 +24,10 @@
             </li>
 
             <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a 
+                    class="nav__link"
+                    @click="clickHandler('contacts')"
+                >
                     <span class="nav__link-text">
                         Контакты
                     </span>
@@ -65,46 +74,67 @@
 </template>
 
 <script>
+
 export default {
-    name: "AppLayoutModalMenu"
+    name: "AppLayoutModalMenu",
+
+    methods: {
+        clickHandler: function(link) {
+            this.$emit('closeMenu', 'false');
+            
+            if(link === 'contacts') {
+                this.$router.push('/contacts');
+            } else if(link === 'works') {
+                this.$router.push('/works');
+            } else {
+                this.$router.push('/');
+            }
+        }
+    },
 }
 </script>
 
 <style scoped>
-    .mobile-menu {
-        position: absolute;
-        left: 0;
-        top: 0px;
-        bottom: 0px;
-        z-index: 12;
+.mobile-menu {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    bottom: 0px;
+    z-index: 12;
 
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        overflow: hidden;
-        padding: 0 30px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: 0 30px;
 
-        background-color: #1c1d1d;
-    }
+    background-color: #1c1d1d;
+}
 
-    .mobile-social {
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
+.mobile-menu_close {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
 
-        display: flex;
-        width: 100%;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        justify-content: center;
-        align-items: center;
-    }
+.mobile-social {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 
-    .socials {
+    display: flex;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials {
     display: flex;
     flex-direction: column;
     align-items: center;

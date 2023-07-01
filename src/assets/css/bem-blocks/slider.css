@@ -142,7 +142,7 @@
 }
 
 .slide__details-wrapper {
-    width: 533px;
+    max-width: 465px;
     height: auto;
     margin-left: 13.1%;
 }
@@ -171,17 +171,43 @@
     font-weight: 700;
 }
 
-
+.slide__link,
 .slide__details {
+    display: block;
+
     margin-top: 15px;
-    color: #bdbdd5;
-    letter-spacing: 1px;
     margin-bottom: 10px;
+
     color: #bdbdd5;
     font-size: 14px;
     line-height: 22px;
+    letter-spacing: 1px;
 }
 
+.slide__link {
+    position: relative;
+    width: max-content;
+    text-decoration: none;
+}
+
+.slide__link::after {
+    position: absolute;
+    top: calc(100% + 2px);
+    right: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 0;
+    height: 1px;
+    background-color: #bdbdd5;
+
+    transition: width 0.3s ease-out;
+    content: "";
+}
+
+.slide__link:hover::after {
+    width: 100%;
+}
 
 .slide__services-flex {
     display: flex;
@@ -231,12 +257,15 @@
     .s1-img-slice-3 {
         width: 450%;
     }
+
     .abt-s1-img-slice-1 {
         left: -200%;
     }
+
     .abt-s1-img-slice-2 {
         left: -300%;
     }
+
     .abt-s1-img-slice-3 {
         left: -400%;
     }
@@ -263,9 +292,21 @@
 
 /* sm <= Medium (md) */
 @media (max-width : 768px) {
+    .s1-img-slice-1,
+    .s1-img-slice-2,
+    .s1-img-slice-3 {
+        width: 500%;
+    }
+
+
     .slide__flex {
         position: relative;
         width: 100%;
+    }
+
+    .slide__flex_works {
+        flex-direction: column;
+        height: 100%;
     }
 
     .slide__main-heading-wrapper {
@@ -309,10 +350,17 @@
 
         display: flex;
         justify-content: flex-start;
-        height: 50vh;
+        max-height: calc(100% - 170px);
+        height: auto;
         margin-top: 170px;
         padding-top: 50px;
-        overflow: scroll;
+        overflow: auto;
+    }
+
+    .slide__text-wrapper_works {
+        flex: 1 0 auto;
+        width: 100%;
+        height: auto;
     }
 
     .slide__details-wrapper {
@@ -334,9 +382,13 @@
         position: relative;
         z-index: 4;
 
-        width: 90%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 20px;
+
+        width: 100%;
         height: auto;
-        margin-bottom: 30px;
+        margin-bottom: 90px;
         margin-left: 25px;
         flex-shrink: 0;
     }
@@ -365,7 +417,6 @@
     .slide__services-flex {
         width: 90%;
         height: auto;
-        margin-bottom: 30px;
         margin-left: 25px;
         flex-shrink: 0;
     }
@@ -373,8 +424,7 @@
 
 @media (max-width: 479px) {
     .slide__text-wrapper {
-        overflow: scroll;
-        margin-top: 200px;
+        margin-top: 140px;
     }
 
     .slide__services-flex {

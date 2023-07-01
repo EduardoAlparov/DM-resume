@@ -53,7 +53,7 @@
     border-width: 1px;
     border-color: rgba(222, 100, 13, 1);
 
-    transition: padding 200ms ease-in-out;
+    transition: padding 200ms ease-in-out, border-color 200ms ease-in;
 }
 
 .buttons__right-icon {
@@ -164,7 +164,21 @@
 @media (max-width: 767px) {
     .buttons__banner-open-wrapper {
         left: 25px;
-        bottom: 20px;
+        bottom: 40px;
         height: auto;
+    }
+
+    .buttons__banner-open {
+        border-style: solid;
+        border-color: var(--white);
+    }
+
+    .buttons__banner-open-icon svg {    
+        fill: var(--white);
+    }
+
+    .buttons__right-icon svg,
+    .buttons__left-icon svg {
+        fill: var(--white);
     }
 }

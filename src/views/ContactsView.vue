@@ -84,10 +84,10 @@
 import SocialsComponent from "../components/commons/SocialsComponent.vue";
 
 export default {
-    name: "ContactsView",
+  name: "ContactsView",
 	components: {
 		SocialsComponent
-	},
+	}
 }
 </script>
 <style scoped>

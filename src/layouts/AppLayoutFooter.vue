@@ -1,7 +1,7 @@
 <template>
     <footer
         class="footer"
-        :class="{footer_close: !hiddenFooterClass}"
+        :class="{'footer_close': !hiddenFooterClass}"
     >
         <p class="footer__details">
             © 2021 . <span style="color: saddlebrown">&#10084;</span> WebDev

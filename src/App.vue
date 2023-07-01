@@ -29,7 +29,10 @@
             @changeHiddenFooterClass="changeHiddenFooterClass"
         />
 
-        <AppLayoutModalMenu v-show="isModalMenuVisible"/>
+        <AppLayoutModalMenu 
+          v-show="isModalMenuVisible"
+          @closeMenu="closeMenu"
+        />
 
     </div>
   </div>
@@ -63,6 +66,9 @@ export default {
         },
         changeHiddenFooterClass() {
             this.hiddenFooterClass = !this.hiddenFooterClass;
+        },
+        closeMenu() {
+            this.isModalMenuVisible = false;
         }
     }
 }

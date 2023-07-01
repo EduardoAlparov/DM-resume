@@ -1,7 +1,10 @@
 .DS_Store
 node_modules
 /dist
-
+/.git/
+/**/Thumbs.db
+/**/*.DS_Store
+/**/debug.log
 
 # local env files
 .env.local

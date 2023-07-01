@@ -31,7 +31,10 @@
 				</button>
 			</div>
 
-			<div class="w-slider__button w-slider__button-right-arrow">
+			<div 
+				class="w-slider__button w-slider__button-right-arrow"
+				:class="{ 'w-slider__button--not-active': notActive }"
+			>
 				<button
 					@click="next()"
 					:disabled="disableNextButton"
@@ -49,27 +52,27 @@
 		</div>
 
 		<div class="back-container">
-            <div class="back-container__column back-container__column_first"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column back-container__column_last"></div>
-        </div>
+			<div class="back-container__column back-container__column_first"></div>
+			<div class="back-container__column"></div>
+			<div class="back-container__column"></div>
+			<div class="back-container__column"></div>
+			<div class="back-container__column"></div>
+			<div class="back-container__column"></div>
+			<div class="back-container__column"></div>
+			<div class="back-container__column back-container__column_last"></div>
+		</div>
 
-        <div class="back-container-2">
-          <div class="back-container-2__column back-container-2__column_first">
-            <div class="back-container-2__socials">
-                <SocialsComponent />
-            </div>
-          </div>
-          <div class="back-container-2__column"></div>
-          <div class="back-container-2__column"></div>
-        </div>
+		<div class="back-container-2">
+			<div class="back-container-2__column back-container-2__column_first">
+				<div class="back-container-2__socials">
+						<SocialsComponent />
+				</div>
+			</div>
+			<div class="back-container-2__column"></div>
+			<div class="back-container-2__column"></div>
+		</div>
 
-        <div class="back-dark"></div>
+		<div class="back-dark"></div>
 	</div>
 </template>
 
@@ -107,7 +110,8 @@ export default {
 			counter: 1,
 
 			disableNextButton: false,
-			disablePrevButton: true
+			disablePrevButton: true,
+			notActive: true
 		}
 	},
 
@@ -140,6 +144,12 @@ export default {
 				this.disableNextButton = false;
 			}
 		}
+	},
+
+	mounted() {
+		setTimeout(() => {
+			this.notActive = false;
+		}, 2600);
 	}
 }
 </script>

@@ -10,7 +10,7 @@
     background-color: #101015;
     transform:translateX(-100%);
 
-    animation: 3s in-out forwards 2.6s;
+    animation: 3s in-out forwards 2.2s;
 }
 
 @keyframes in-out {

@@ -32,20 +32,21 @@
 								<h2 class="slide__about-text-heading">
 									Обо мне
 								</h2>
+
 								<h3 class="details-bold slide__details-bold">
-									Morbi lacinia, ligula quis maximus mollis,
-									orci lectus ornare enim, vel rhoncus
-									tellus libero ut arcu.
+									Эдуард Алпаров, 33 года, г.Казань
 								</h3>
+
 								<p class="details slide__details">
-									Lorem ipsum dolor sit amet, consectetur
-									adipiscing elit. Suspendisse varius enim in
-									eros elementum tristique. Duis cursus, mi
-									quis viverra ornare, eros dolor interdum
-									nulla, ut commodo libero vitae erat. Aenean
-									faucibus nibh et justo cursus id rutrum
-									lorem imperdiet Aliquam facilisis elementum
-									dui.
+									Верстаю с 2020г. На счету множество проектов:
+									корпоративные сайты, веб-сервисы, лендинги, сайты-визитки.
+									Некоторые из выполненых находятся в разделе "Работы".
+									Стартеры для верстки, которыми я пользуюсь (чаще всего)
+									находятся на главной странице в моем гитхабе.
+									Предпочитаю удаленную работу, фриланс или проектную работу.
+									От работодателя или заказчика жду интересных проектов
+									с четким техзаданием. От себя же гарантирую ответственный 
+									подход к работе.
 								</p>
 
 								<h2 class="slide__about-text-heading">
@@ -65,14 +66,20 @@
 									<span class="_accent-color">#</span>
 									semantic HTML
 									<br>
+									<span class="_accent-color">#</span>
+									git
+									<br>
 								</div>
 
 								<div class="slide__servies-block-two">
 									<span class="_accent-color">#</span>
-									vanilla JS
+									JavaScript ES6
 									<br>
 									<span class="_accent-color">#</span>
-									Vue
+									jQuery 
+									<br>
+									<span class="_accent-color">#</span>
+									Vue js
 									<br>
 								</div>
 
@@ -80,6 +87,8 @@
 									<span class="_accent-color">#</span>
 									figma
 									<br>
+									<span class="_accent-color">#</span>
+									photoshop
 								</div>
 							</div>
 						</div>
@@ -91,27 +100,27 @@
 
 
 		<div class="back-container">
-            <div class="back-container__column back-container__column_first"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column"></div>
-            <div class="back-container__column back-container__column_last"></div>
-        </div>
+			<div class="back-container__column back-container__column_first"></div>
+			<div class="back-container__column"></div>
+			<div class="back-container__column"></div>
+			<div class="back-container__column"></div>
+			<div class="back-container__column"></div>
+			<div class="back-container__column"></div>
+			<div class="back-container__column"></div>
+			<div class="back-container__column back-container__column_last"></div>
+		</div>
 
-        <div class="back-container-2">
-          <div class="back-container-2__column back-container-2__column_first">
-            <div class="back-container-2__socials">
-                <SocialsComponent />
-            </div>
-          </div>
-          <div class="back-container-2__column"></div>
-          <div class="back-container-2__column"></div>
-        </div>
+		<div class="back-container-2">
+			<div class="back-container-2__column back-container-2__column_first">
+				<div class="back-container-2__socials">
+						<SocialsComponent />
+				</div>
+			</div>
+			<div class="back-container-2__column"></div>
+			<div class="back-container-2__column"></div>
+		</div>
 
-        <div class="back-dark"></div>
+		<div class="back-dark"></div>
 
 	</div>
 </template>
@@ -120,10 +129,11 @@
 import SocialsComponent from "../components/commons/SocialsComponent.vue";
 
 export default {
-    name: "AboutView",
+  name: "AboutView",
+
 	components: {
 		SocialsComponent
-	},
+	}
 }
 </script>
 
